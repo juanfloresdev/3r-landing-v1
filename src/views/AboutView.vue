@@ -3,7 +3,7 @@
   <div class="about-container">
     <div class="about-content">
       <h3>
-        Somos una empresa mexicana fundada en 1978 con la misión de ofrecer soluciones innovadoras que simplifican la
+        Somos una empresa mexicana fundada en 2018 con la misión de ofrecer soluciones innovadoras que simplifican la
         construcción. Somos un jugador importante en América Latina y el sur de Estados Unidos.
       </h3>
       <h3>

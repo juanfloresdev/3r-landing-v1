@@ -10,7 +10,7 @@
           <nav class="topbar-menu" v-if="!isSmallScreen">
             <ul>
               <li v-for="option in menuOptions" :key="option.name">
-                <a :href="option.link">{{ option.name }}</a>
+                <routerLink :to="option.link">{{ option.name }}</routerLink>
               </li>
             </ul>
           </nav>
