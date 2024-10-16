@@ -57,7 +57,7 @@ export default {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 500px;
+  height: 70vh;
 }
 
 .carousel-inner {
