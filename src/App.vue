@@ -4,7 +4,7 @@
     <SecondTopbar />
   </div>
 
-  <div :style="routerViewContainerStyle" >
+  <div :style="routerViewContainerStyle" id="appContent">
     <RouterView />
     <ContactoForm></ContactoForm>
     <TheFooter></TheFooter>
@@ -32,7 +32,7 @@ export default {
   computed: {
     routerViewContainerStyle() {
       return {
-        height: `calc(100vh - ${this.topbarHeight}px)`,
+        height: `calc(100vh - ${this.topbarHeight}px - 1px)`,
         overflowY: 'auto',
       };
     },

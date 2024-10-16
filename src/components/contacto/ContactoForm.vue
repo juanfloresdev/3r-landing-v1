@@ -1,5 +1,5 @@
 <template>
-    <div class="contact-container">
+    <div class="contact-container" id="contacto">
         <!-- Imagen a la izquierda -->
         <div class="contact-image">
             <img :src="ingeImage" alt="contact image" />

@@ -3,7 +3,7 @@
     <header>
       <div class="topbar">
         <div class="topbar-content">
-          <img :src="logo" alt="Logo de la Empresa" class="logo" />
+          <img :src="logo" alt="Logo de la Empresa" class="logo" @click="this.$router.push({ path: '/' })" />
 
           <button class="sidebar-toggle" @click="toggleSidebar" v-if="isSmallScreen">☰</button>
 
@@ -62,6 +62,7 @@ export default {
 .topbar {
   background-color: var(--text-color-on-ligth);
   color: black;
+  border-bottom: 1px solid #bbb;
 }
 
 .topbar-content {

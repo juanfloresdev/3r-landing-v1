@@ -128,7 +128,7 @@ export default {
     /* Ancho de la tarjeta */
     margin: 0 10px;
     /* Espacio entre tarjetas */
-    min-height: 280px;
+    min-height: 200px;
 }
 
 .card:hover {
