@@ -1,0 +1,22 @@
+html {
+  font-family: Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+}
+
+:root {
+  --primary-color: #b1d710;
+  --secondary-color: #111111;
+  --soft-color: #cfcfcf;
+  --text-color-on-ligth: #ffffff;
+  --text-color-on-dark: #111111;
+  --title-color: #222222;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5rem; /* Este valor sin unidad es el más común para establecer el interlineado */
+}
