@@ -121,7 +121,7 @@ export default {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease;
-    width: 280px;
+    width: 250px;
     /* Ancho de la tarjeta */
     margin: 0 10px;
     /* Espacio entre tarjetas */
