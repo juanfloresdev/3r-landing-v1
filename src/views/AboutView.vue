@@ -40,7 +40,7 @@ export default {
       breadcrumbData: [
         { label: 'Inicio', link: '/' },
         { label: 'Productos', link: '/productos' },
-        { label: 'Concreto', link: '/productos/concreto' }
+        { label: 'Concreto', link: '/concretos' }
       ],
       items: [
         'Adhesivos',

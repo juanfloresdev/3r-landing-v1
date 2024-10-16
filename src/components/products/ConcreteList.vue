@@ -73,7 +73,6 @@ export default {
             breadcrumbData: [
                 { label: 'Inicio', link: '/' },
                 { label: 'Productos', link: '/productos' },
-                { label: 'Concreto', link: '/concretos' }
             ],
             concretes: [
                 {
