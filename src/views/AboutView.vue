@@ -67,6 +67,8 @@ export default {
   max-width: 1200px;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .numbered-list {
   padding: 0;
