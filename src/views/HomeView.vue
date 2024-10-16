@@ -13,7 +13,7 @@ import ProductSelector from '@/components/home/categorias/ProductSelector.vue';
       <div class="categories-content">
         <h1>Conoce nuestros productos</h1>
         <div style="catetories-container">
-           <ProductSelector></ProductSelector>
+          <ProductSelector></ProductSelector>
         </div>
       </div>
 
@@ -43,7 +43,10 @@ import ProductSelector from '@/components/home/categorias/ProductSelector.vue';
 
     </div>
 
-    <TheTools></TheTools>
+ 
+      <TheTools></TheTools>
+
+
 
 
   </main>
