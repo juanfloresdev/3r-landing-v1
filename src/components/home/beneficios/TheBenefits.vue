@@ -84,7 +84,6 @@ export default {
                 this.visibleItems = 1;
             }
         }
-
     }
 };
 </script>
@@ -98,6 +97,10 @@ export default {
     margin-bottom: 3rem;
 }
 
+.carousel h1{
+    text-align: center;
+    margin-bottom: 3rem;
+}
 .carousel-inner {
     display: flex;
     transition: transform 0.5s ease;

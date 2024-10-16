@@ -1,7 +1,7 @@
 <script setup>
 import HomeBanner from '@/components/home/HomeBanner.vue';
 import Portafolio from '@/components/home/proyectos/Portafolio.vue';
-import TheTools from '@/components/home/herramientas/TheTools.vue';
+import TheBenefits from '@/components/home/beneficios/TheBenefits.vue';
 import ProductSelector from '@/components/home/categorias/ProductSelector.vue';
 
 </script>
@@ -22,7 +22,7 @@ import ProductSelector from '@/components/home/categorias/ProductSelector.vue';
 
     <div class="top-products">
       <h1 class="top-products-header">
-        Productos destacados
+        Conoce nuestro trabajo
       </h1>
 
       <div class="top-products-divider">
@@ -44,7 +44,7 @@ import ProductSelector from '@/components/home/categorias/ProductSelector.vue';
     </div>
 
  
-      <TheTools></TheTools>
+      <TheBenefits></TheBenefits>
 
 
 
