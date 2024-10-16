@@ -78,8 +78,8 @@ export default {
 .carousel-item img {
   position: relative;
   z-index: 1;
-  width: auto;
-  height: 100%;
+  width: 80%;
+  height: auto;
   object-fit: contain;
 }
 
