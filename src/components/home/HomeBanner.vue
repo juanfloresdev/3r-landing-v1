@@ -1,8 +1,8 @@
 <template>
   <div class="carousel">
     <div class="carousel-inner" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
-      <div v-for="(image, index) in images" :key="index" class="carousel-item">
-        <img :src="image" alt="Carousel Image" />
+      <div v-for="(item, index) in items" :key="index" class="carousel-item" :style="{ background: item.background }">
+        <img :src="item.image" alt="Carousel Image" />
       </div>
     </div>
     <button class="prev" @click="prevSlide">&#10094;</button>
@@ -14,22 +14,39 @@
 import baner1 from '@/assets/images/baner/baner-1.jpg'
 import baner2 from '@/assets/images/baner/baner-2.jpg'
 import baner3 from '@/assets/images/baner/baner-3.jpg'
+
+import background1 from '@/assets/images/baner/background-1.png'
+import background2 from '@/assets/images/baner/background-2.png'
+import background3 from '@/assets/images/baner/background-3.png'
+
+
 export default {
   data() {
     return {
       currentIndex: 0,
-      images: [
-        baner1, baner2, baner3
+      items: [
+        {
+          image: baner1,
+          background: `url(${background1})`
+        },
+        {
+          image: baner2,
+          background: `url(${background2})`
+        },
+        {
+          image: baner3,
+          background: `url(${background3})`
+        },
       ]
     };
   },
   methods: {
     nextSlide() {
-      this.currentIndex = (this.currentIndex + 1) % this.images.length;
+      this.currentIndex = (this.currentIndex + 1) % this.items.length;
     },
     prevSlide() {
       this.currentIndex =
-        this.currentIndex === 0 ? this.images.length - 1 : this.currentIndex - 1;
+        this.currentIndex === 0 ? this.items.length - 1 : this.currentIndex - 1;
     }
   }
 };
@@ -43,6 +60,12 @@ export default {
   height: 500px;
 }
 
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%;
+}
+
 .carousel-item {
   min-width: 100%;
   height: 100%;
@@ -50,35 +73,6 @@ export default {
   align-items: center;
   justify-content: center;
   position: relative;
-  background: linear-gradient(135deg, #f0f0f0, #d3d3d3, #f0f0f0);
-  /* Efecto de mármol */
-}
-
-.carousel-item::before,
-.carousel-item::after {
-  content: "";
-  position: absolute;
-  width: 200px;
-  height: 100px;
-  background: rgba(255, 255, 255, 0.2);
-  /* Color semitransparente */
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  transform: skew(20deg);
-  /* Crear el efecto de paralelogramo */
-  z-index: 0;
-}
-
-.carousel-item::before {
-  top: 20px;
-  left: 20px;
-  transform: skew(20deg) rotate(10deg);
-  background: var(--color-primary);
-}
-
-.carousel-item::after {
-  bottom: 20px;
-  right: 20px;
-  transform: skew(20deg) rotate(-10deg);
 }
 
 .carousel-item img {
@@ -89,20 +83,13 @@ export default {
   object-fit: contain;
 }
 
-.carousel-inner {
-  display: flex;
-  transition: transform 0.5s ease;
-  height: 100%;
-}
-
-
 .prev,
 .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
-  color: var(--text-color-on-ligth);
+  color: var(--text-color-on-light);
   border: none;
   font-size: 24px;
   padding: 10px;
