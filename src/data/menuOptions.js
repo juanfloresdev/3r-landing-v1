@@ -6,12 +6,6 @@ export const menuOptions = [
     { name: '¿DÓNDE COMPRAR?', link: '/sucursales' },
   ];
   
-  export const topbarOptions = [
-    { name: 'ACERCA DE CEMIX', link: '#acerca' },
-    { name: 'HERRAMIENTAS', link: '#herramientas' },
-    { name: 'CONTÁCTANOS', link: '#contacto' },
-  ];
-
 
   export const categoryData = [
     {

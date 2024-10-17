@@ -7,10 +7,8 @@
             <div class="concrete-content">
                 <p>
                     Estamos aquí para ayudarte a hacer realidad tu proyecto. Si necesitas concreto de alta calidad, ¡no
-                    dudes en
-                    contactarnos! Completa el formulario de cotización a continuación y recibirás una respuesta
-                    personalizada en
-                    breve.
+                    dudes en contactarnos! Completa el formulario de cotización a continuación y recibirás una respuesta
+                    personalizada en breve.
                 </p>
 
                 <h2>
@@ -33,25 +31,23 @@
                 </h2>
                 <div class="number-input-container">
                     <input type="number" v-model="number" @input="validateNumber(4)" class="large-input"
-                        placeholder="Ingrese un número de 4 dígitos"  required />
+                        placeholder="Ingrese un número de 4 dígitos" required />
                 </div>
 
                 <h2>
                     Capture tu número de teléfono
                 </h2>
                 <div class="number-input-container">
-                    <input type="phone" v-model="phone" class="large-input"  @input="validatePhone(10)"
+                    <input type="phone" v-model="phone" class="large-input" @input="validatePhone(10)"
                         placeholder="Ingrese un número a 10 dígitos" required />
                 </div>
 
-                <div class="quote-button-container">
+                <div class="quote-button-container">                   
                     <button class="quote-button" @click="requestQuote">
-                        Solicitar Cotización
+                        Solicitar cotización
                     </button>
                 </div>
             </div>
-
-
         </div>
     </div>
 
@@ -93,8 +89,8 @@ export default {
                 },
             ],
             selectedConcrete: '',
-            number:null,
-            phone:'',
+            number: null,
+            phone: '',
         };
     },
     methods: {
@@ -171,7 +167,6 @@ h3 {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    /* Cambia el cursor al pasar sobre la tarjeta */
 }
 
 .concrete-card:hover {
@@ -179,12 +174,10 @@ h3 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo para la tarjeta seleccionada */
+
 .concrete-card.selected {
     border: 2px solid var(--primary-color);
-    /* Añade un borde al seleccionar */
     background-color: #f2fff0;
-    /* Cambia el fondo de la tarjeta seleccionada */
 }
 
 .concrete-info {
@@ -199,7 +192,7 @@ h3 {
 
 .concrete-info p {
     font-size: 1rem;
-    color: #666;
+    color: var(--secondary-color); ;
 }
 
 
@@ -211,30 +204,19 @@ h3 {
 }
 
 .large-input {
-    width: 100%;
-    /* O ajustar a un tamaño específico */
-    max-width: 400px;
-    /* Máxima anchura para el input */
-    height: 60px;
-    /* Altura del input */
-    font-size: 24px;
-    /* Tamaño de la fuente */
-    padding: 10px;
-    /* Espaciado interno */
-    border: 2px solid #ccc;
-    /* Borde del input */
-    border-radius: 10px;
-    /* Esquinas redondeadas */
-    outline: none;
-    /* Sin contorno */
-    transition: border-color 0.3s ease;
-    /* Transición suave para el borde */
+    width: 100%;    
+    max-width: 400px;    
+    height: 60px;    
+    font-size: 24px;    
+    padding: 10px;    
+    border: 2px solid var(--secondary-color);    
+    border-radius: 10px;    
+    outline: none;    
+    transition: border-color 0.3s ease;    
 }
 
 .large-input:focus {
     border-color: var(--primary-color);
-    ;
-    /* Color del borde al enfocar */
 }
 
 .quote-button-container {
@@ -245,33 +227,24 @@ h3 {
 }
 
 .quote-button {
-    background-color: var(--primary-color);
-    /* Color de fondo */
-    color: black;
-    /* Color del texto */
-    font-size: 24px;
-    /* Tamaño de la fuente */
-    padding: 15px 30px;
-    /* Espaciado interno */
-    border: none;
-    /* Sin borde */
-    border-radius: 10px;
-    /* Esquinas redondeadas */
-    cursor: pointer;
-    /* Cursor en forma de mano */
+    background-color: var(--primary-color);    
+    color: black;    
+    font-size: 24px;    
+    padding: 20px 0px;    
+    border: none;    
+    border-radius: 10px;    
+    cursor: pointer;    
     transition: background-color 0.3s ease, transform 0.3s ease;
-    /* Transiciones suaves */
+    max-width: 424px;
+    width: 100%;
 }
 
 .quote-button:hover {
-    background-color: var(--primary-color);
-    /* Color al pasar el mouse */
-    transform: scale(1.05);
-    /* Efecto de aumento */
+    background-color: var(--primary-color);    
+    transform: scale(1.05);    
 }
 
 .quote-button:focus {
-    outline: none;
-    /* Sin contorno al enfocar */
+    outline: none;    
 }
 </style>

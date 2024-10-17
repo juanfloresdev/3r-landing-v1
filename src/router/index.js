@@ -13,7 +13,19 @@ const router = createRouter({
     {
       path: '/acerca',
       name: 'acerca',
-      component: () => import('../views/AboutView.vue')
+      component: () => import('../views/AboutView.vue'),
+      children:[
+        {
+          path: 'mision',
+          name: 'mision',
+          component:  () => import('@/components/about/TheMision.vue'),
+        },
+        {
+          path: 'vision',
+          name: 'vision',
+          component:  () => import('@/components/about/TheVision.vue'),
+        },
+      ]
     },
     {
       path: '/productos',
@@ -34,6 +46,11 @@ const router = createRouter({
       path: '/aviso-privacidad',
       name: 'aviso-privacidad',
       component: () => import('../components/layout/AvisoPrivacidad.vue')
+    },
+    {
+      path: '/contacto',
+      name: 'contacto',
+      component: () => import('../components/contacto/ContactoSpan.vue')
     },
   ],
 

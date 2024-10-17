@@ -3,8 +3,8 @@
       <div class="topbar-content">
         <nav>
           <ul>
-            <li><router-link to="/acerca"> Acerca de 3R </router-link></li>        
-            <li><a href="#contacto">Contáctanos</a></li>
+            <li><router-link to="/acerca">Acerca de 3R </router-link></li>        
+            <li><router-link to="/contacto">Contáctanos</router-link></li>
           </ul>
         </nav>
         <div class="social-icons">
