@@ -7,7 +7,7 @@
               <button class="close-button" @click="closeSidebar">✖</button>
               <ul>
                 <li v-for="option in menuOptions" :key="option.name">
-                  <a :href="option.link">{{ option.name }}</a>
+                  <router-link :to="option.link" @click="closeSidebar">{{ option.name }}</router-link>
                 </li>
               </ul>
                     </div>

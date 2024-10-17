@@ -4,11 +4,11 @@
         <div class="footer-content">
             <div class="company-info">
                 <h3>Acerca de 3R</h3>
-                <div class="top-products-divider-block"/>
+                <div class="top-products-divider-block" />
                 <ul>
-                    <li>Oficinas</li>
-                    <li>Misión</li>
-                    <li>Visión</li>
+                    <li><router-link to="/sucursales">Oficinas</router-link></li>
+                    <li><router-link to="/acerca#mision"> Misión </router-link></li>
+                    <li><router-link to="/acerca#vision"> Visión </router-link></li>
                 </ul>
             </div>
 
@@ -23,16 +23,14 @@
 
         </div>
         <div class="privacy-notice">
-            <p>
-                {{ privacyMessage }}
-                <router-link to="/privacy-policy">Leer aviso de privacidad</router-link>
-            </p>
+            <AvisoPrivacidadPopup></AvisoPrivacidadPopup>
         </div>
     </footer>
 </template>
 
 <script>
 import logo from '@/assets/images/3r-logo-white.jpg';
+import AvisoPrivacidadPopup from './AvisoPrivacidadPopup.vue';
 
 
 export default {
@@ -40,6 +38,9 @@ export default {
         return {
             logo
         };
+    },
+    components:{
+        AvisoPrivacidadPopup
     }
 };
 </script>
@@ -90,7 +91,8 @@ ul {
     list-style: square;
     padding-left: 18px;
 }
-li{
+
+li {
     margin-top: 1.3rem;
 }
 
@@ -98,5 +100,10 @@ li{
     width: 40px;
     background-color: var(--primary-color);
     height: 3px;
-  }
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
 </style>

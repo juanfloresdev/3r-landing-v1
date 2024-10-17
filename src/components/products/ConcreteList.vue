@@ -91,10 +91,6 @@ export default {
                     days: '28',
                     description: "Fácil de aplicar, diseñado para resultados rápidos."
                 },
-                {
-                    days: '30',
-                    description: "Innovación y calidad en cada detalle."
-                },
             ],
             selectedConcrete: '',
             number:null,

@@ -3,8 +3,7 @@
 export const menuOptions = [
     { name: 'PRODUCTOS', link: '/productos' },
     { name: 'CONCRETO', link: '/concretos' },
-    { name: '¿DÓNDE COMPRAR?', link: '/donde-comprar' },
-    { name: 'VENDE', link: '/vende-cemix' },
+    { name: '¿DÓNDE COMPRAR?', link: '/sucursales' },
   ];
   
   export const topbarOptions = [

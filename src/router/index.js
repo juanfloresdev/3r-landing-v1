@@ -25,6 +25,16 @@ const router = createRouter({
       name: 'concretos',
       component: () => import('../components/products/ConcreteList.vue')
     },
+    {
+      path: '/sucursales',
+      name: 'sucursales',
+      component: () => import('../components/sucursales/DondeComprar.vue')
+    },
+    {
+      path: '/aviso-privacidad',
+      name: 'aviso-privacidad',
+      component: () => import('../components/layout/AvisoPrivacidad.vue')
+    },
   ],
 
 
