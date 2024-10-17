@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import baner1 from '@/assets/images/baner/baner-1.jpg'
-import baner2 from '@/assets/images/baner/baner-2.jpg'
-import baner3 from '@/assets/images/baner/baner-3.jpg'
+import baner1 from '@/assets/images/baner/baner-1.png'
+import baner2 from '@/assets/images/baner/baner-2.png'
+import baner3 from '@/assets/images/baner/baner-3.png'
 
 import background1 from '@/assets/images/baner/background-1.png'
 import background2 from '@/assets/images/baner/background-2.png'
