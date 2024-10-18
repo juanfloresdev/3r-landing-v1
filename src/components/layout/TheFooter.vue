@@ -21,7 +21,7 @@
                 <img :src="logo" alt="Logo 3r">
                 <p>1234 Calle Principal, Ciudad, País</p>
                 <p>+123 456 7890</p>
-                <p>contacto@empresa.com</p>
+               
 
                 <div class="social-icons">
 
@@ -43,6 +43,10 @@
 
 
 
+        </div>
+
+        <div>
+            <p>contacto@empresa.com</p>
         </div>
 
         <div class="privacy-divider">
