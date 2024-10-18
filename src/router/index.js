@@ -14,16 +14,16 @@ const router = createRouter({
       path: '/acerca',
       name: 'acerca',
       component: () => import('../views/AboutView.vue'),
-      children:[
+      children: [
         {
           path: 'mision',
           name: 'mision',
-          component:  () => import('@/components/about/TheMision.vue'),
+          component: () => import('@/components/about/TheMision.vue'),
         },
         {
           path: 'vision',
           name: 'vision',
-          component:  () => import('@/components/about/TheVision.vue'),
+          component: () => import('@/components/about/TheVision.vue'),
         },
       ]
     },
@@ -57,14 +57,18 @@ const router = createRouter({
 
 
   scrollBehavior(to, from, savedPosition) {
-    // Usar nextTick para asegurarse de que el DOM está actualizado antes de ajustar el scroll
-    nextTick(() => {
-      const scrollContainer = document.getElementById('appContent');
-      if (scrollContainer) {
-        scrollContainer.scrollTop = 0; // Reinicia el scroll del div
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      if (to.hash) {
+        return {
+          el: to.hash, 
+          behavior: 'smooth', 
+        };
       }
-    });
-    return { x: 0, y: 0 };  // También puedes ajustar la ventana principal si es necesario
+
+      return { top: 0, behavior: 'smooth' }; 
+    }
   }
 
 

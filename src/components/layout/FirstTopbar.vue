@@ -34,15 +34,18 @@
     color: var(--text-color-on-ligth);
     padding: 10px 0;
     font-size: small;
+    width: 100%;
   }
   
   .topbar-content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    gap: 0.5rem;
   }
   
   nav ul {

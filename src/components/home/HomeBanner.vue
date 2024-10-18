@@ -107,6 +107,7 @@ export default {
   width: auto;
   height: 100%;
   object-fit: contain;
+  max-width: 100%;
 }
 
 .prev,

@@ -1,13 +1,21 @@
 <template>
-  <div ref="topbar">
-    <FirstTopbar  />
-    <SecondTopbar />
-  </div>
+  <div>
+    <!-- FirstTopbar se posiciona con sticky -->
+    <div class="first-topbar">
+      <FirstTopbar />
+    </div>
 
-  <div :style="routerViewContainerStyle" id="appContent">
-    <RouterView />
-    <ContactoForm></ContactoForm>
-    <TheFooter></TheFooter>
+    <!-- SecondTopbar siempre fijo -->
+    <div class="fixed-second-topbar">
+      <SecondTopbar />
+    </div>
+
+    <!-- Contenido principal -->
+    <div id="appContent" class="app-content">
+      <RouterView />
+      <ContactoForm></ContactoForm>
+      <TheFooter></TheFooter>
+    </div>
   </div>
 </template>
 
@@ -24,35 +32,29 @@ export default {
     ContactoForm,
     TheFooter,
   },
-  data() {
-    return {
-      topbarHeight: 0,
-    };
-  },
-  computed: {
-    routerViewContainerStyle() {
-      return {
-        height: `calc(100vh - ${this.topbarHeight}px - 1px)`,
-        overflowY: 'auto',
-      };
-    },
-  },
-  mounted() {
-    this.adjustRouterViewHeight();
-    window.addEventListener('resize', this.adjustRouterViewHeight);
-  },
-  beforeDestroy() {
-    window.removeEventListener('resize', this.adjustRouterViewHeight);
-  },
-  methods: {
-    adjustRouterViewHeight() {
-      this.topbarHeight = this.$refs.topbar ? this.$refs.topbar.offsetHeight : 0;
-
-    },
-  },
 };
 </script>
 
 <style scoped>
+
+.fixed-second-topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  position: sticky;
+}
+
+.first-topbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.app-content{
+  width: 100%;
+}
+
 
 </style>
