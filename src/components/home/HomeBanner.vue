@@ -11,14 +11,18 @@
 </template>
 
 <script>
-import baner1 from '@/assets/images/baner/baner-1.png'
-import baner2 from '@/assets/images/baner/baner-2.png'
-import baner3 from '@/assets/images/baner/baner-3.png'
+import baner1Desktop from '@/assets/images/baner/rike.png'
+import baner2Desktop from '@/assets/images/baner/baner-2.png'
+import baner3Desktop from '@/assets/images/baner/baner-3.png'
 
-import background1 from '@/assets/images/baner/background-1.png'
+import baner1Mobile from '@/assets/images/baner/movil/rike-movil.png'
+import baner2Mobile from '@/assets/images/baner/movil/rike-movil.png'
+import baner3Mobile from '@/assets/images/baner/movil/rike-movil.png'
+
+
+import background1 from '@/assets/images/baner/background-3.png'
 import background2 from '@/assets/images/baner/background-2.png'
-import background3 from '@/assets/images/baner/background-3.png'
-
+import background3 from '@/assets/images/baner/background-1.png'
 
 export default {
   data() {
@@ -26,19 +30,32 @@ export default {
       currentIndex: 0,
       items: [
         {
-          image: baner1,
-          background: `url(${background1})`
+          image: baner1Desktop,
+          background: `url(${background1})`,
+          mobile: baner1Mobile,
+          desktop: baner1Desktop,
         },
         {
-          image: baner2,
-          background: `url(${background2})`
+          image: baner2Desktop,
+          background: `url(${background2})`,
+          mobile: baner2Mobile,
+          desktop: baner2Desktop,
         },
         {
-          image: baner3,
-          background: `url(${background3})`
-        },
+          image: baner3Desktop,
+          background: `url(${background3})`,
+          mobile: baner3Mobile,
+          desktop: baner3Desktop,
+        }
       ]
     };
+  },
+  mounted() {
+    this.updateImagesForScreenSize();
+    window.addEventListener('resize', this.updateImagesForScreenSize);
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.updateImagesForScreenSize);
   },
   methods: {
     nextSlide() {
@@ -47,6 +64,15 @@ export default {
     prevSlide() {
       this.currentIndex =
         this.currentIndex === 0 ? this.items.length - 1 : this.currentIndex - 1;
+    },
+    updateImagesForScreenSize() {
+      this.items.forEach(item => {
+        if (window.innerWidth < 640) {
+          item.image = item.mobile;
+        } else {
+          item.image = item.desktop;
+        }
+      });
     }
   }
 };
@@ -78,8 +104,8 @@ export default {
 .carousel-item img {
   position: relative;
   z-index: 1;
-  width: 80%;
-  height: auto;
+  width: auto;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -88,8 +114,8 @@ export default {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: var(--text-color-on-light);
+  background-color: rgba(180, 180, 180, 0.5);
+  color: white;
   border: none;
   font-size: 24px;
   padding: 10px;
@@ -108,6 +134,6 @@ export default {
 
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(160, 160, 160, 0.8);
 }
 </style>
