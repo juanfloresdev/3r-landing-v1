@@ -1,8 +1,9 @@
 <template>
   <div class="carousel">
     <div class="carousel-inner" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
-      <div v-for="(item, index) in items" :key="index" class="carousel-item" :style="{ background: item.background }">
-        <img :src="item.image" alt="Carousel Image" />
+      <div v-for="(item, index) in items" :key="index" class="carousel-item" :style="{ backgroundImage: item.background }">
+        <img :src="item.image" alt="Carousel Image"/>
+        <button>Ver concretos</button>
       </div>
     </div>
     <button class="prev" @click="prevSlide">&#10094;</button>
@@ -11,7 +12,7 @@
 </template>
 
 <script>
-import baner1Desktop from '@/assets/images/baner/rike.png'
+import baner1Desktop from '@/assets/images/baner/baner-1.png'
 import baner2Desktop from '@/assets/images/baner/baner-2.png'
 import baner3Desktop from '@/assets/images/baner/baner-3.png'
 
@@ -20,7 +21,7 @@ import baner2Mobile from '@/assets/images/baner/movil/rike-movil.png'
 import baner3Mobile from '@/assets/images/baner/movil/rike-movil.png'
 
 
-import background1 from '@/assets/images/baner/background-3.png'
+import background1 from '@/assets/images/baner/background-1.png'
 import background2 from '@/assets/images/baner/background-2.png'
 import background3 from '@/assets/images/baner/background-1.png'
 
@@ -67,7 +68,7 @@ export default {
     },
     updateImagesForScreenSize() {
       this.items.forEach(item => {
-        if (window.innerWidth < 640) {
+        if (window.innerWidth < 800) {
           item.image = item.mobile;
         } else {
           item.image = item.desktop;
@@ -99,6 +100,10 @@ export default {
   align-items: center;
   justify-content: center;
   position: relative;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .carousel-item img {
@@ -109,6 +114,29 @@ export default {
   object-fit: contain;
   max-width: 100%;
 }
+
+
+.carousel-item button {
+  position: fixed;
+  z-index: 2;
+  left: 50px;
+  bottom: 100px;
+  width: 300px;
+  height: 80px;
+  font-size: 24px;
+  border-radius: 100px;
+  background-color: var(--primary-color);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.carousel-item button:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+
 
 .prev,
 .next {
