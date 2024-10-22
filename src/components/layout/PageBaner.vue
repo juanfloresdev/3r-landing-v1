@@ -15,7 +15,7 @@
   </template>
   
   <script>
-  import background1 from "@/assets/images/baner/background-1.png"
+  import background1 from "@/assets/images/baner/background-2.png"
   export default {
     props: {
       title: {

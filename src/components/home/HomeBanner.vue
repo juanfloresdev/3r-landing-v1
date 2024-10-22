@@ -2,12 +2,12 @@
   <div class="carousel">
     <div class="carousel-inner" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
       <div v-for="(item, index) in items" :key="index" class="carousel-item" :style="{ backgroundImage: item.background }">
-        <img :src="item.image" alt="Carousel Image"/>
-        <button>Ver concretos</button>
+        <!-- <img :src="item.image" alt="Carousel Image"/> -->
+        <!-- <button>Ver concretos</button> -->
       </div>
     </div>
-    <button class="prev" @click="prevSlide">&#10094;</button>
-    <button class="next" @click="nextSlide">&#10095;</button>
+    <!-- <button class="prev" @click="prevSlide">&#10094;</button>
+    <button class="next" @click="nextSlide">&#10095;</button> -->
   </div>
 </template>
 
@@ -33,21 +33,21 @@ export default {
         {
           image: baner1Desktop,
           background: `url(${background1})`,
-          mobile: baner1Mobile,
+          mobile: baner1Desktop,
           desktop: baner1Desktop,
         },
-        {
-          image: baner2Desktop,
-          background: `url(${background2})`,
-          mobile: baner2Mobile,
-          desktop: baner2Desktop,
-        },
-        {
-          image: baner3Desktop,
-          background: `url(${background3})`,
-          mobile: baner3Mobile,
-          desktop: baner3Desktop,
-        }
+        //  {
+        //    image: baner2Desktop,
+        //    background: `url(${background2})`,
+        //    mobile: baner2Mobile,
+        //    desktop: baner2Desktop,
+        //  },
+        // {
+        //   image: baner3Desktop,
+        //   background: `url(${background3})`,
+        //   mobile: baner3Mobile,
+        //   desktop: baner3Desktop,
+        // }
       ]
     };
   },
